@@ -52,15 +52,26 @@ public class WordCount {
 
 
     private int countCharacters(Path path) throws IOException {
-        return Files.readAllLines(path).stream()
-                .mapToInt(String::length)
-                .sum();
+        byte[] bytes = Files.readAllBytes(path);
+        String content = new String(bytes);
+        return content.length();
     }
 
     private int countWords(Path path) throws IOException {
-        return Files.readAllLines(path).stream()
-                .mapToInt(line -> line.split("\\s+").length)
-                .sum();
+        byte[] bytes = Files.readAllBytes(path);
+        int words = 0;
+        boolean inWord = false;
+
+        for (byte b : bytes) {
+            if (Character.isWhitespace((char) b)) {
+                inWord = false;
+            } else if (!inWord) {
+                words++;
+                inWord = true;
+            }
+        }
+
+        return words;
     }
 
     private void validateFilePath(String filePath) {

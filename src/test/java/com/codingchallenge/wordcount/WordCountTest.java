@@ -31,7 +31,7 @@ class WordCountTest {
             "'-m', 'testfile.txt', 'Hello World', 0, 0, 0, 11",
             "'-m', 'emptyfile.txt', '', 0, 0, 0, 0",
             "'-m', 'specialcharsfile.txt', 'Hello, 世界!', 0, 0, 0, 10",
-            "'-m', 'multilinefile.txt', 'Line1\nLine2\nLine3', 0, 0, 0, 15",
+            "'-m', 'multilinefile.txt', 'Line1\nLine2\nLine3', 0, 0, 0, 17",
             "'' , 'testfile.txt', 'Hello World', 11, 1, 2, 0",
             "'' , 'emptyfile.txt', '', 0, 0, 0, 0",
             "'' , 'specialcharsfile.txt', 'Hello, 世界!', 14, 1, 2, 0",
