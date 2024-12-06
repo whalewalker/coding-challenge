@@ -24,7 +24,7 @@ class ParserTest {
             "src/main/resources/tests/tests/step2/invalid2.json, 1",
             "src/main/resources/tests/tests/step3/valid.json, 0",
             "src/main/resources/tests/tests/step3/invalid.json, 1",
-            "src/main/resources/tests/tests/step4/valid2.json, 0",
+            "src/main/resources/tests/tests/step4/valid.json, 0",
             "src/main/resources/tests/tests/step4/valid2.json, 0",
             "src/main/resources/tests/tests/step4/invalid.json, 1",
     })

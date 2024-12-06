@@ -11,8 +11,6 @@ public class Token {
     enum Type {
         STRING,
         NUMBER,
-        BOOLEAN,
-        NULL,
         COMMA,
         COLON,
         LBRACE,

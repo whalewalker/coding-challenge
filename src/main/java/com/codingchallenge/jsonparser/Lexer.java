@@ -76,7 +76,7 @@ public class Lexer {
 
     private Token tokenizeIdentifier() {
         StringBuilder identifier = new StringBuilder();
-        while (position < input.length() && (Character.isLetterOrDigit(input.charAt(position)) || input.charAt(position) == '_')) {
+        while (position < input.length() && Character.isLetterOrDigit(input.charAt(position))) {
             identifier.append(input.charAt(position));
             position++;
         }
@@ -93,7 +93,7 @@ public class Lexer {
     }
 
     public static void main(String[] args) {
-        Lexer lexer = new Lexer("{ \"key\": \"value\" }");
+        Lexer lexer = new Lexer("{ \"null\": false }");
         List<Token> tokens = lexer.tokenize();
         for (Token token : tokens) {
             System.out.println(token.toString());
